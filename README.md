@@ -1,5 +1,13 @@
 # AngularServeur
 
+``Packages installes: ``
+    _- bootstrap : "^4.5.3",_
+    _- concurrently": "^5.3.0",_
+    _- font-awesome": "^4.7.0",_
+    _- jquery: "^3.5.1",_
+    _- json-server": "^0.16.3",_
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
 ## Development server
