@@ -1,28 +1,8 @@
-<nav class="navbar navbar-expand-sm bg-light navbar-light">
-  <ul class="navbar navbar-nav">
-    <li>
-      <button (click)="onGetAllProducts()" class="btn btn-outline-info ml-m2" >All</button>
-    </li>
-    <li>
-      <button class="btn btn-outline-info ml-m2">Selected</button>
-    </li>
-    <li>
-      <button class="btn btn-outline-info ml-m2">Available</button>
-    </li>
-  </ul>
-</nav>
-<div class="container" *ngIf="products$">
-  <table class="table">
-    <tr>
-    <th>ID</th><th>Name</th><th>Price</th><th>Quantity</th><th>Selected</th><th>Available</th>
-    </tr>
-    <tr *ngFor="let p of products$ | async">
-      <td>{{p.id}}</td>
-      <td>{{p.name}}</td>
-      <td>{{p.price}}</td>
-      <td>{{p.quantity}}</td>
-      <td>{{p.selected}}</td>
-      <td>{{p.available}}</td>
-    </tr>
-  </table>
-</div>
+<app-products-navbar (eventEmitter)="onActionEvent($event)"></app-products-navbar>
+
+<app-products-list
+  [productsInput$]="products$"
+  (eventEmitter)="onActionEvent($event)"
+></app-products-list>
+
+

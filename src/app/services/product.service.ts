@@ -24,4 +24,29 @@ export class ProductService {
   getAvailableProducts():Observable<Product[]>{
     return this.http.get<Product[]>(this.host+"products?available=true");
   }
+
+  getSearchProducts(keyword: any):Observable<Product[]> {
+    return this.http.get<Product[]>(this.host+"products?name_like="+keyword);
+  }
+
+  selected(product:Product):Observable<Product>{
+    product.selected = !product.selected;
+    return this.http.put<Product>(this.host+"products/"+product.id, product);
+  }
+
+  delete(p: Product):Observable<void> {
+    return this.http.delete<void>(this.host+"products/"+p.id);
+  }
+
+  save(p: Product):Observable<Product> {
+    return this.http.post<Product>(this.host+"products/", p);
+  }
+
+  getProductById(id: number):Observable<Product>{
+    return this.http.get<Product>(this.host+"products/"+id);
+  }
+
+  edit(p: Product):Observable<Product> {
+    return this.http.put<Product>(this.host+"products/"+p.id, p);
+  }
 }

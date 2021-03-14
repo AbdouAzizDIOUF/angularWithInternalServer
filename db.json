@@ -2,11 +2,11 @@
   "products": [
     {
       "id": 1,
-      "name": "Computer",
+      "name": "Computers",
       "price": 2100,
       "quantity": 55,
-      "available": true,
-      "selected": true
+      "selected": false,
+      "available": true
     },
     {
       "id": 2,
@@ -18,11 +18,27 @@
     },
     {
       "id": 3,
-      "name": "Printer",
-      "price": 3100,
-      "quantity": 35,
+      "name": "Laptop",
+      "price": 7100,
+      "quantity": 15,
+      "selected": false,
+      "available": false
+    },
+    {
+      "name": "CLIENT",
+      "price": 0,
+      "quantity": 0,
+      "selected": true,
       "available": true,
-      "selected": false
+      "id": 5
+    },
+    {
+      "name": "Samsung",
+      "price": 45100,
+      "quantity": 55,
+      "selected": false,
+      "available": true,
+      "id": 6
     }
   ]
 }
